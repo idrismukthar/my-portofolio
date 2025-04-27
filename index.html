@@ -2,52 +2,201 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Idris Mukthar - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', sans-serif;
+            color: white;
+            background-color: #0c0c0c;
+        }
+
+        video#bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(60%);
+        }
+
+        nav {
+            background: rgba(0,0,0,0.7);
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 100px 30px;
+            text-align: center;
+        }
+
+        #projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .project-box:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .project-logo {
+            height: 80px;
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    
-  <div class="container" style="display: flex; height: 100%; width: 100%; align-items: center; justify-content: center;">
-    <div class="grid" style="display: grid; height: 100%; width: 100%; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(4, 1fr); gap: 16px; background-color: #eee; padding: 8px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);">
-    
-      <div 
-        style="font-family: 'M PLUS 2 Variable', sans-serif; grid-column: span 6; grid-row: span 4; background-color: rgba(255, 182, 193, 0.5); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center;"
-      >
-        <p>Salmon</p>
-      </div>
-    
-      <div 
-        style="font-family: 'M PLUS 2 Variable', sans-serif; grid-column: span 3; grid-row: span 3; background-color: rgba(173, 255, 47, 0.5); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center;"
-      >
-        <p>Broccoli</p>
-      </div>
-    
-      <div 
-        style="font-family: 'M PLUS 2 Variable', sans-serif; grid-column: span 1; grid-row: span 3; background-color: rgba(255, 255, 224, 0.5); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center;"
-      >
-        <p>Tamago</p>
-      </div>
-    
-      <div 
-        style="font-family: 'M PLUS 2 Variable', sans-serif; grid-column: span 2; grid-row: span 2; background-color: rgba(210, 180, 140, 0.5); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center;"
-      >
-        <p>Pork</p>
-      </div>
-    
-      <div 
-        style="font-family: 'M PLUS 2 Variable', sans-serif; grid-column: span 2; grid-row: span 1; background-color: rgba(144, 238, 144, 0.5); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center;"
-      >
-        <p>Edamame</p>
-      </div>
-    
-      <div 
-        style="font-family: 'M PLUS 2 Variable', sans-serif; grid-column: span 6; grid-row: span 3; background-color: rgba(255, 160, 122, 0.5); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center;"
-      >
-        <p>Tomato</p>
-      </div>
-    
-    </div>
-  </div>
-  
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="your-drone-footage.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#contact">Contacts</a>
+        <a href="#pictures">Pictures</a>
+        <a href="#experience">Past Working Experience</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to the Portfolio of Idris Mukthar</h1>
+        <p>
+            I am a passionate software developer currently based in Lagos, Nigeria. 
+            I studied at [Your School Name] where I focused heavily on web development, 
+            coding practices, and modern software engineering principles. 
+            My mission is to craft digital experiences that are clean, elegant, and impactful.
+            Over the next six months, I am committed to leveling up my skills, 
+            pushing projects live, and creating an online presence that matches the ambition I carry. 
+            Welcome to my journey.
+        </p>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            [More details about your journey, tech stack, passion, and maybe a quote you like] 
+            (if you want me to fill this too, say the word).
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo1.png" alt="Logo">
+            <h3>Music Player App (Spotifyify)</h3>
+        </div>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo2.png" alt="Logo">
+            <h3>Music Album Recommender (TuneScope)</h3>
+        </div>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo3.png" alt="Logo">
+            <h3>Portfolio Website (VisionBoard)</h3>
+        </div>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo4.png" alt="Logo">
+            <h3>Weather App (SkyPredict)</h3>
+        </div>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo5.png" alt="Logo">
+            <h3>To-Do App (TaskWhiz)</h3>
+        </div>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo6.png" alt="Logo">
+            <h3>Simple Blog Site (WriteHub)</h3>
+        </div>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo7.png" alt="Logo">
+            <h3>Fitness Tracker (PulseFit)</h3>
+        </div>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo8.png" alt="Logo">
+            <h3>Image Gallery (PixelVault)</h3>
+        </div>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo9.png" alt="Logo">
+            <h3>Landing Page Clone (LaunchPeak)</h3>
+        </div>
+
+        <div class="project-box">
+            <img class="project-logo" src="logo10.png" alt="Logo">
+            <h3>Simple E-commerce (ShopSwift)</h3>
+        </div>
+
+    </section>
+
+    <!-- Pictures Section -->
+    <section id="pictures">
+        <h2>Pictures</h2>
+        <p>Gallery coming soon!</p>
+    </section>
+
+    <!-- Past Working Experience -->
+    <section id="experience">
+        <h2>Past Working Experience</h2>
+        <p>Details about internships, freelance gigs, projects, etc.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p>More information coming soon!</p>
+    </section>
+
+    <footer>
+        &copy; 2025 Idris Mukthar. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
