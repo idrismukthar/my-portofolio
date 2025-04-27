@@ -13,16 +13,37 @@
             background-color: #0c0c0c;
         }
 
-        video#bg-video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
-            object-fit: cover;
-            filter: brightness(60%);
+        body {
+        position: relative;
+        z-index: 1;
+        background: transparent;
+    }
+
+
+        h1, h2, h3 {
+            margin: 0;
+            padding: 20px 0;
         }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+    /* ...existing code... */
+    
+    video#bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -999; /* Lower z-index to ensure it stays behind */
+        object-fit: cover;
+        filter: brightness(60%);
+    }
+    
+    /* ...existing code... */
 
         nav {
             background: rgba(0,0,0,0.7);
@@ -42,10 +63,12 @@
             font-size: 18px;
         }
 
-        section {
-            padding: 100px 30px;
-            text-align: center;
-        }
+        /* Ensure all sections have proper stacking */
+    section {
+        position: relative;
+        z-index: 2;
+        background: rgba(0,0,0,0.5); /* Add slight overlay for better text visibility */
+    }
 
         #projects {
             display: flex;
@@ -84,10 +107,12 @@
 <body>
 
     <!-- Background Video -->
-    <video autoplay muted loop id="bg-video">
-        <source src="your-drone-footage.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./img/footy (1).mp4" type="video/mp4">
+        <source src="./img/vid.webm" type="video/webm">
+        <!-- Fallback content -->
+        <div style="background: #0c0c0c;">Your browser doesn't support video playback.</div>
     </video>
-
     <!-- Navbar -->
     <nav>
         <a href="#home">Home</a>
@@ -197,6 +222,6 @@
     <footer>
         &copy; 2025 Idris Mukthar. All Rights Reserved.
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
