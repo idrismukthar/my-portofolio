@@ -2,226 +2,175 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idris Mukthar - Portfolio</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="icons8-favicon-16.png">
+
+    <!-- External Fonts and Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Helvetica', sans-serif;
-            color: white;
-            background-color: #0c0c0c;
-        }
-
-        body {
-        position: relative;
-        z-index: 1;
-        background: transparent;
-    }
-
-
-        h1, h2, h3 {
-            margin: 0;
-            padding: 20px 0;
-        }
-        h1 {
-            font-size: 2.5em;
-            text-align: center;
-        }
-    /* ...existing code... */
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    video#bg-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -999; /* Lower z-index to ensure it stays behind */
-        object-fit: cover;
-        filter: brightness(60%);
-    }
-    
-    /* ...existing code... */
-
-        nav {
-            background: rgba(0,0,0,0.7);
-            padding: 15px 30px;
-            position: sticky;
-            top: 0;
-            display: flex;
-            justify-content: space-around;
-            font-weight: bold;
-            z-index: 1;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-
-        /* Ensure all sections have proper stacking */
-    section {
-        position: relative;
-        z-index: 2;
-        background: rgba(0,0,0,0.5); /* Add slight overlay for better text visibility */
-    }
-
-        #projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .project-box {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            width: 250px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .project-box:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .project-logo {
-            height: 80px;
-            width: 80px;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            background: rgba(0,0,0,0.8);
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-        }
-    </style>
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Portfolio of Idris Mukthar, a passionate software developer based in Lagos, Nigeria.">
+    <meta property="og:title" content="Idris Mukthar - Portfolio">
+    <meta property="og:description" content="Explore my projects and experiences in software development.">
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta property="og:url" content="https://yourportfolio.com">
+    <meta name="keywords" content="Portfolio, Idris Mukthar, Software Developer, Projects, Experience">
+    <meta name="author" content="Idris Mukthar">
 </head>
-<body>
 
-    <!-- Background Video -->
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="./img/footy (1).mp4" type="video/mp4">
-        <source src="./img/vid.webm" type="video/webm">
-        <!-- Fallback content -->
-        <div style="background: #0c0c0c;">Your browser doesn't support video playback.</div>
-    </video>
+<body>
+        <!-- Video Container -->
+        <div class="video-wrapper">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="./img/footy(1).mp4" type="video/mp4">
+                <source src="./img/vid.webm" type="video/webm">
+            </video>
+        </div>
     <!-- Navbar -->
     <nav>
         <a href="#home">Home</a>
         <a href="#contact">Contacts</a>
         <a href="#pictures">Pictures</a>
-        <a href="#experience">Past Working Experience</a>
+        <a href="#experience">Experience</a>
         <a href="#faq">FAQ</a>
     </nav>
-
     <!-- Home Section -->
     <section id="home">
         <h1>Welcome to the Portfolio of Idris Mukthar</h1>
-        <p>
-            I am a passionate software developer currently based in Lagos, Nigeria. 
-            I studied at [Your School Name] where I focused heavily on web development, 
-            coding practices, and modern software engineering principles. 
-            My mission is to craft digital experiences that are clean, elegant, and impactful.
-            Over the next six months, I am committed to leveling up my skills, 
-            pushing projects live, and creating an online presence that matches the ambition I carry. 
-            Welcome to my journey.
-        </p>
     </section>
 
-    <!-- About Me Section -->
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>
-            [More details about your journey, tech stack, passion, and maybe a quote you like] 
-            (if you want me to fill this too, say the word).
-        </p>
+        <div class="about-container">
+            <p>
+                <i class="fas fa-user"></i> My name is <strong>Idris Mukthar</strong>. I am a passionate and multi-skilled creative based in Lagos, Nigeria.
+                I specialize in <strong>software development</strong>, with a focus on creating user-friendly and visually appealing web applications.
+                I have a strong foundation in front-end web development, mastering technologies such as <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, and more. 
+                Beyond coding, I am also highly experienced in <strong>UI/UX design</strong> using <strong>Figma</strong>, creating seamless and visually appealing digital experiences.
+            </p>
+        
+            <p>
+                <i class="fas fa-video"></i> My skills extend to professional <strong>video editing</strong>, with proficiency in tools like <strong>Adobe Premiere Pro</strong>, 
+                allowing me to produce engaging multimedia content. 
+                I am currently studying <strong>Microbiology at Lagos State University (LASU)</strong>, 
+                combining my academic pursuits with my passion for technology and design. 
+                I believe in continuous learning, creativity, and building impactful solutions that connect with people.
+            </p>
+        
+            <p>
+                <i class="fas fa-bolt"></i> My mission is to blend science, art, and technology to create innovative digital products. 
+                I am always open to new opportunities to grow, collaborate, and leave a mark in the digital space.
+            </p>
+        </div>
     </section>
-
+    
     <!-- Projects Section -->
     <section id="projects">
         <h2>My Projects</h2>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo1.png" alt="Logo">
-            <h3>Music Player App (Spotifyify)</h3>
-        </div>
+        <div class="projects-container">
+            <!-- Project Items -->
+            <div class="project-card">
+                <img src="img/logo1.png" alt="Music Player App Logo">
+                <h3>Music Player App (Spotifyify)</h3>
+            </div>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo2.png" alt="Logo">
-            <h3>Music Album Recommender (TuneScope)</h3>
-        </div>
+            <div class="project-card">
+                <img src="img/logo2.png" alt="Music Album Recommender Logo">
+                <h3>Music Album Recommender (TuneScope)</h3>
+            </div>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo3.png" alt="Logo">
-            <h3>Portfolio Website (VisionBoard)</h3>
-        </div>
+            <div class="project-card">
+                <img src="img/logo3.png" alt="Portfolio Website Logo">
+                <h3>Portfolio Website (VisionBoard)</h3>
+            </div>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo4.png" alt="Logo">
-            <h3>Weather App (SkyPredict)</h3>
-        </div>
+            <div class="project-card">
+                <img src="img/logo4.png" alt="Weather App Logo">
+                <h3>Weather App (SkyPredict)</h3>
+            </div>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo5.png" alt="Logo">
-            <h3>To-Do App (TaskWhiz)</h3>
-        </div>
+            <div class="project-card">
+                <img src="img/logo5.png" alt="To-Do App Logo">
+                <h3>To-Do App (TaskWhiz)</h3>
+            </div>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo6.png" alt="Logo">
-            <h3>Simple Blog Site (WriteHub)</h3>
-        </div>
+            <div class="project-card">
+                <img src="img/logo6.png" alt="Simple Blog Site Logo">
+                <h3>Simple Blog Site (WriteHub)</h3>
+            </div>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo7.png" alt="Logo">
-            <h3>Fitness Tracker (PulseFit)</h3>
-        </div>
+            <div class="project-card">
+                <img src="img/logo7.png" alt="Fitness Tracker Logo">
+                <h3>Fitness Tracker (PulseFit)</h3>
+            </div>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo8.png" alt="Logo">
-            <h3>Image Gallery (PixelVault)</h3>
-        </div>
+            <div class="project-card">
+                <img src="img/logo8.png" alt="Expense Tracker Logo">
+                <h3>Expense Tracker (BudgetWise)</h3>
+            </div>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo9.png" alt="Logo">
-            <h3>Landing Page Clone (LaunchPeak)</h3>
-        </div>
+            <div class="project-card">
+                <img src="img/logo9.png" alt="E-commerce Site Logo">
+                <h3>E-commerce Site (ShopSmart)</h3>
+            </div>
+            
+            <div class="project-card">
+                    <img src="logo10.png" alt="Logo">
+                    <h3>Simple Blog Site (WriteHub)</h3>
+            </div>
+        
+            <div class="project-card">
+                    <img src="logo11.png" alt="Logo">
+                    <h3>Fitness Tracker (PulseFit)</h3>
+            </div>
+        
+            <div class="project-card">
+                    <img src="logo12.png" alt="Logo">
+                    <h3>Image Gallery (PixelVault)</h3>
+            </div>
+        
+                <div class="project-card">
+                    <img src="logo13.png" alt="Logo">
+                    <h3>Landing Page Clone (LaunchPeak)</h3>
+                </div>
+        
+                <div class="project-card">
+                    <img src="logo14.png" alt="Logo">
+                    <h3>Simple E-commerce (ShopSwift)</h3>
+                </div>
+                
+                <div class="project-card">
+                    <img src="logo15.png" alt="Logo">
+                    <h3>Password Manager (Holder)</h3>
+                </div>
 
-        <div class="project-box">
-            <img class="project-logo" src="logo10.png" alt="Logo">
-            <h3>Simple E-commerce (ShopSwift)</h3>
-        </div>
+                <div class="project-card">
+                    <img src="logo16.png" alt="Logo">
+                    <h3>Cryptocurrency Price Chart (Eth0xly)</h3>
+                </div>
 
+                <div class="project-card">
+                    <img src="logo17.png" alt="Logo">
+                    <h3>Simple Chat App (ChitChat)</h3>
+            </div>
+
+            <div class="project-card">
+                <img src="logo18.png" alt="Logo">
+                <h3>Simple Quiz App (QuizMaster)</h3>
+            </div>
+
+        </div>
     </section>
 
-    <!-- Pictures Section -->
-    <section id="pictures">
-        <h2>Pictures</h2>
-        <p>Gallery coming soon!</p>
-    </section>
-
-    <!-- Past Working Experience -->
-    <section id="experience">
-        <h2>Past Working Experience</h2>
-        <p>Details about internships, freelance gigs, projects, etc.</p>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <p>More information coming soon!</p>
-    </section>
-
-    <footer>
+    <!-- Footer -->
+    <footer class="footer-container">	
         &copy; 2025 Idris Mukthar. All Rights Reserved.
     </footer>
-<script src="script.js"></script>
+
 </body>
 </html>

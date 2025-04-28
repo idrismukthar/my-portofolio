@@ -1,0 +1,196 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    background: transparent
+    color: white;
+}
+
+/* Content Overlay */
+section {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* Video Background */
+video#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.video-wrapper {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navbar */
+nav {
+    background: rgba(0,0,0,0.7);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Sections */
+section {
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,0.5);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    width: 250px;
+    min-height: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+#about {
+    padding: 50px 20px;
+}
+
+.about-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease;
+}
+
+.about-container p {
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-container strong {
+    color: #fff;
+}
+
+.about-container i {
+    color: #00d1b2;
+    margin-right: 8px;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .project-card {
+        width: 90%;
+    }
+}
