@@ -96,24 +96,14 @@ section {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
-    width: 250px;
+    width: 260px;
     min-height: 300px;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.project-card:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-10px);
-}
-
-.project-card img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 15px;
 }
 
 .project-card h3 {
@@ -121,6 +111,20 @@ section {
     margin-top: 10px;
     color: #fff;
 }
+
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+}
+
+img.project-logo {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
 
 #about {
     padding: 50px 20px;
